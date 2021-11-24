@@ -18,10 +18,10 @@ export class SeriesComponent implements OnInit {
   async ngOnInit() {
     try {
       const response = await this.seriesService.getAll();
-      this.arrSeries = response;
+      this.arrSeries = response.data;
     }
     catch (err) {
-
+      console.log(err);
     }
   }
 
