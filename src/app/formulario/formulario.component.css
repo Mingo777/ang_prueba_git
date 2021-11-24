@@ -1,0 +1,15 @@
+.btn{
+    width: 70%;
+}
+
+.error{
+    color:tomato;
+}
+
+.ng-valid.ng-touched:not(form){
+    border: 1px solid lightgreen;
+}
+
+.ng-invalid.ng-touched:not(form){
+    border: 1px solid tomato;
+}
