@@ -1,1 +1,9 @@
-<p>productos works!</p>
+<div class="productos">
+  <div class="producto" *ngFor="let prod of productos; let indice = index">
+    <h4>{{ prod.name }}</h4>
+    <p>{{ prod.description }}</p>
+    <p>{{ prod.price }}</p>
+
+    <img [src]="prod.image" />
+  </div>
+</div>
