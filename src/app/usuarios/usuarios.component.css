@@ -1,0 +1,30 @@
+.usuarios{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.usuario{
+    background-color: rgba(184, 135, 11, 0.486);
+    width: 250px;
+    padding: 20px;
+    margin: 10px;
+    border: 2px solid gray;
+    color: rgb(173, 47, 47);
+}
+
+.usuario img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+footer .container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(173, 47, 47);
+    color: rgba(184, 135, 11, 0.486);;
+    padding: 20px 5px;
+    text-align: center;
+}
