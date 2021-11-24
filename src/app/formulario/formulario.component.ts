@@ -9,7 +9,7 @@ import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/fo
 export class FormularioComponent implements OnInit {
   formulario: FormGroup;
 
-  constructor(/* private usuariosService:UsuariosService */) {
+  constructor(private usuariosService: UsuariosService) {
     this.formulario = new FormGroup({
       first_name: new FormControl('', [Validators.required]),
       last_name: new FormControl('', [Validators.required]),
@@ -24,7 +24,7 @@ export class FormularioComponent implements OnInit {
 
   onSubmit() {
     console.log('Que te envio las cosas');
-    /* this.usuariosService.create(this.formulario.value); */
+    this.usuariosService.create(this.formulario.value);
   }
 
 }
