@@ -8,6 +8,7 @@ import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './home/home.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { ProductosComponent } from './productos/productos.component';
+import { SeriesComponent } from './series/series.component';
 
 @NgModule({
   declarations: [
@@ -16,9 +17,10 @@ import { ProductosComponent } from './productos/productos.component';
     HomeComponent,
     UsuariosComponent,
     ProductosComponent,
+    SeriesComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

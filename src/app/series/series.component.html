@@ -1,0 +1,9 @@
+<div class="series">
+    <div class="serie" *ngFor="let serie of arrSeries">
+        <h3>Titulo: {{serie.titulo}} </h3>
+        <img [src]="serie.imagen" alt="">
+        <p>Creador: {{serie.creador}} </p>
+        <p>Fecha de emisión: {{serie.fechas}} </p>
+        <p>Canal: {{serie.canal}}</p>
+    </div>
+</div>
