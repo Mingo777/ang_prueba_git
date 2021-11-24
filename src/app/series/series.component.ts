@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Serie } from '../interfaces/serie.interface';
+import { SeriesService } from '../series.service';
 
 @Component({
   selector: 'app-series',
@@ -10,11 +11,18 @@ export class SeriesComponent implements OnInit {
 
   arrSeries: Serie[];
 
-  constructor() {
+  constructor(private seriesService: SeriesService) {
     this.arrSeries = [];
   }
 
-  ngOnInit(): void {
+  async ngOnInit() {
+    try {
+      const response = await this.seriesService.getAll();
+      this.arrSeries = response;
+    }
+    catch (err) {
+
+    }
   }
 
 }
