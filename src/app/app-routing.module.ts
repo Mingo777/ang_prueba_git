@@ -13,11 +13,10 @@ const routes: Routes = [
   { path: 'productos', component: ProductosComponent },
   { path: 'formulario', component: FormularioComponent },
   { path: 'series', component: SeriesComponent },
-  { path: '**', redirectTo: '/home' }
-]
-
+  { path: '**', redirectTo: '/home' },
+];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
