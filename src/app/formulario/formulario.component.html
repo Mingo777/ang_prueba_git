@@ -1,5 +1,5 @@
 <div class="container p-5">
-    <form FormGroup="formulario" (ngSubmit)="onSubmit()" class="text-center" novalidate>
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()" class="text-center" novalidate>
         <div class="mb-3">
             <label class="form-label">Nombre</label>
             <input type="text" class="form-control" formControlName="first_name">
