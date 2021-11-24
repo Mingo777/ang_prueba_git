@@ -23,6 +23,7 @@ export class FormularioComponent implements OnInit {
   }
 
   onSubmit() {
+    console.log('Que te envio las cosas');
     /* this.usuariosService.create(this.formulario.value); */
   }
 
