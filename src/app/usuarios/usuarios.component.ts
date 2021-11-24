@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Usuario } from 'src/interfaces/usuarios.interfaces';
+import { Usuarios } from '../interface/interface.usuarios';
+import { UsuariosService } from '../usuarios.service';
 
 @Component({
   selector: 'app-usuarios',
@@ -7,12 +8,19 @@ import { Usuario } from 'src/interfaces/usuarios.interfaces';
   styleUrls: ['./usuarios.component.css']
 })
 export class UsuariosComponent implements OnInit {
-  arrUsuarios: Usuario[]
-  constructor() {
+  arrUsuarios: Usuarios[]
+  constructor(private userServices: UsuariosService) {
     this.arrUsuarios = []
   }
 
-  ngOnInit(): void {
+  async ngOnInit() {
+    try {
+      const response = await this.userServices.getAll();
+      this.arrUsuarios = response.data
+    } catch (error) {
+      console.log(error);
+
+    }
   }
 
 }
