@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+
 import { Producto } from '../interfaces/producto.interface';
+import { ProductosService } from '../productos.service';
 
 @Component({
   selector: 'app-productos',
@@ -9,9 +11,16 @@ import { Producto } from '../interfaces/producto.interface';
 export class ProductosComponent implements OnInit {
   @Input() productos: Producto[];
 
-  constructor() {
+  constructor(private productoService: ProductosService) {
     this.productos = [];
   }
 
-  ngOnInit(): void {}
+  async ngOnInit() {
+    try {
+      const response = await this.productoService.getAll();
+      this.productos = response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  }
 }
