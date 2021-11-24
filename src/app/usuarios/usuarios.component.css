@@ -1,0 +1,18 @@
+.usuarios{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.usuario{
+    width: 250px;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid gray;
+}
+
+.usuario img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
